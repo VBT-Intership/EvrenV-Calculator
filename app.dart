@@ -15,16 +15,12 @@ class App extends UI {
         switch (Operation.values[inputOperation]) {
           case Operation.addition:
             {
-              try {
-                int firstNumber = Input.readCharacter(
-                    inputMessage: "Birinci sayıyı giriniz: ");
-                int secondNumber = Input.readCharacter(
-                    inputMessage: "İkinci sayıyı giriniz: ");
+              int firstNumber =
+                  Input.readCharacter(inputMessage: "Birinci sayıyı giriniz: ");
+              int secondNumber =
+                  Input.readCharacter(inputMessage: "İkinci sayıyı giriniz: ");
 
-                writeResult(Math.addition(firstNumber, secondNumber));
-              } catch (e) {
-                writeInvalidMessage();
-              }
+              writeResult(Math.addition(firstNumber, secondNumber));
             }
             break;
           case Operation.subtraction:
